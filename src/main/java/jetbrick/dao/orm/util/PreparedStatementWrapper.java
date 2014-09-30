@@ -198,8 +198,11 @@ public class PreparedStatementWrapper implements PreparedStatement {
         return ps.execute(sql);
     }
 
+    /**
+     * @deprecated
+     */
     @Override
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public void setUnicodeStream(int parameterIndex, InputStream x, int length) throws SQLException {
         ps.setUnicodeStream(parameterIndex, x, length);
     }
