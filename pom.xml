@@ -10,13 +10,17 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jetbrick-orm</artifactId>
-    <version>2.0</version>
-    <packaging>jar</packaging>
+    <artifactId>jetbrick-orm-parent</artifactId>
+    <version>2.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
     <description>Object-relational mapping framework for jetbrick</description>
-    <url>http://subchen.github.io/jetbrick</url>
+    <url>http://subchen.github.io/jetbrick-orm/</url>
+
+    <modules>
+        <module>jetbrick-orm</module>
+    </modules>
 
     <scm>
         <url>https://github.com/subchen/jetbrick-orm.git</url>
@@ -28,30 +32,5 @@
         <system>github issue</system>
         <url>https://github.com/subchen/jetbrick-orm/issues</url>
     </issueManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jetbrick-commons</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
 </project>
