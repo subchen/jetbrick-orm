@@ -321,7 +321,7 @@ public class DbHelper {
         RowMapper<T> rowMapper;
         if (beanClass.isArray()) {
             rowMapper = (RowMapper<T>) new ArrayRowMapper();
-        } else if (beanClass.getName().equals("java.util.Map")) {
+        } else if (Map.class.isAssignableFrom(beanClass)) {
             rowMapper = (RowMapper<T>) new MapRowMapper();
         } else if (beanClass.getName().startsWith("java.")) {
             rowMapper = new SingleColumnRowMapper<T>(beanClass);
